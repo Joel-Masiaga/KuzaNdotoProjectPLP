@@ -1,0 +1,32 @@
+<!-- templates/base.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Kuza Ndoto Campaign{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'blog/main.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'blog-home' %}">Home</a></li>
+                <li><a href="{% url 'blog-about' %}">About</a></li>
+                <li><a href="{% url 'blog-contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kuza Ndoto Campaign. Empowering the future, one student at a time.</p>
+    </footer>
+</body>
+</html>

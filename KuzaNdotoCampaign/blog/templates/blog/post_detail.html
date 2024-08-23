@@ -1,0 +1,13 @@
+<!-- templates/post_detail.html -->
+{% extends 'blog/base.html' %}
+
+{% block title %}{{ post.title }} | Kuza Ndoto Campaign{% endblock %}
+
+{% block content %}
+    <article>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.content }}</p>
+        <p><strong>Author:</strong> {{ post.author.username }}</p>
+        <p><strong>Published on:</strong> {{ object.date_posted|date:"F d, Y" }}</p>
+    </article>
+{% endblock %}
